@@ -1,43 +1,98 @@
 /*CSS Doc*/
 
 @import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100&family=Nanum+Myeongjo&family=Oleo+Script+Swash+Caps&display=swap');
 
 body {
     background: white;
     font-family: Lato, sans-serif;
 }
 
-#head {
-    font-family: "Sofia", sans-serif;
-    text-align: center;
-    left: 50%;
-    color: #2d6a9c;
-    font-size: 22px;
-    height: 150px;
-    border-radius: 4px;
-    max-width: 100%;
-    animation-name: move_header;
-    animation-duration: 5s;
-    animation-iteration-count: 1;
+.wrapper {
+    text-align:center;
+    display: inline-block;
 }
 
+.wrapper ul{
+    text-align:justify;
+    margin-top: 45px;
+    margin-left: -20px;
+}
 
+.wrapper .static-txt {
+    margin-top:15px;
+    font-size: 22px;
+    color: #d3d3d3;
+}
 
+.dynamic-txts li {
+    list-style: none;
+    font-size: 28px;
+    font-weight: 500;
+    color: #ff7a59;
+    position: relative;
+    top:0;
+    margin-left: 20px;
+    margin-top: -48px;
+}
+.dynamic-txts li span{
+    color: #ff7a59;
+    border-radius: 5px;
+    font-family: "Sofia", sans-serif;
+}
+.dynamic-txts li span::after{
+    left:0;
+    content:"";
+    position: absolute;
+    height:100%;
+    width:100%;
+    background:rgb(0, 27, 36);
+    border-left:2px solid #ff7a59;
+    animation:typing 1.5s steps(10) infinite;
+}
+
+@keyframes typing{
+    100%{
+        left:100%;
+        margin: 0 -35px 0 35px;
+    }
+}
+
+#head {
+
+    width: 100%;
+    font-family: "Sofia", sans-serif;
+    background-color: rgb(0, 27, 36);
+    text-align: center;
+    color: #ffffff;
+    font-size: 22px;
+    height: 140px;
+    border-radius: 5px;
+    max-width: 100%;
+
+}
 .nav-bar {
     list-style: none;
     text-align: center;
     padding: 0px;
     margin: auto;
-    max-width: 90%;
+    max-width: 100%;
     margin-top: 25px;
+    background-color: rgb(255, 255, 255);
+    border-radius:px;
 }
 
 .nav-bar li {
     display: inline-block;
     padding: 10px;
+    
 }
 
 .nav-bar li a {
+    font-family: 'Josefin Slab', serif;
+    font-weight: bold;
     font-size: 20px;
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -47,7 +102,9 @@ body {
 }
 
 .nav-bar li a:hover {
-    color: rgb(0, 19, 59);
+    
+    color: rgb(255, 255, 255);
+    font-weight:bold;
     font-weight: 550;
     background: #ff7a59;
     border-radius: 100px;
@@ -57,14 +114,17 @@ body {
 
 
 #article {
+  
     margin: 20px;
 }
+
 
 #article ul {
     text-align: justify;
 }
 
 .container {
+    
     height: 40%;
 }
 
@@ -92,12 +152,44 @@ body {
 
 .tittle {
     text-align: center;
-    margin-left: 30px;
-    margin-top: 10px;
-    padding: 15px;
-    color: black;
-    font-size: 25px;
+    font-size: 28px;
+    font-family: 'Square Peg', cursive;
+    font-weight: 600;
+    color: #000000;
+    position: relative;
+    display: block;
+    font-weight: bold;
+    margin-left: -45px !important;
+    animation-name: move_tittle;
+    animation-duration: 3s;
+    animation-fill-mode: forwards
 }
+
+
+.tittle ::after {
+    content: '';
+    width: 170px;
+    height: 3px;
+    background: linear-gradient(to right, rgb(0, 27, 36), #ffffff);
+    position: absolute;
+    bottom: -5px;
+    margin-left: -150px !important;
+
+}
+
+@keyframes move_tittle {
+
+    from {
+        margin-right: 100%;
+    }
+
+    to {
+        margin-left: 10%;
+    }
+
+}
+
+
 
 #footer {
     font-size: 10px;
@@ -226,49 +318,10 @@ body {
     padding: 15px;
 }
 
-/*Movimientos*/
-@keyframes move_header {
-
-    10% {
-        transform: rotate(0deg);
-        color: #ff7a59;
-        font-size: 0px;
-
-    }
-
-    25% {
-        color: #033661;
-        transform: rotate(14deg);
-        font-size: 0px;
-    }
-
-    50% {
-        color: #53b2ff;
-        transform: rotate(0deg);
-        font-size: 13px;
-    }
-
-    75% {
-        color: #82cdff;
-        transform: rotate(14deg);
-        font-size: 17px;
-    }
-
-    100% {
-        color: #2d6a9c;
-        transform: rotate(0deg);
-        font-size: 22px;
-
-
-    }
-
-}
-
-
 /*Form*/
 
 
-span {
+.contact_form span {
     color: #940202;
 }
 
@@ -297,19 +350,22 @@ label {
     font-size: 15px;
     width: 460px;
     height: auto;
-    margin-left: 20%;
+    margin-left: 29%;
     padding-top: 30px;
     padding-bottom: 20px;
     background-color: #ffffff;
     padding-left: 30px;
     font-family: "Sofia", sans-serif;
+    color: white;
+    background-color: rgb(14, 34, 41);
+    border-radius: 25px;
 }
 
 .button {
     border-radius: 30px;
     color: white;
-    border: 3px solid rgb(0, 38, 51);
-    background-color: rgb(0, 27, 36);
+    border: 2px solid rgb(255, 253, 253);
+    background-color: rgb(1, 27, 36);
 }
 
 .button:hover {
