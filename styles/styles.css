@@ -11,18 +11,18 @@ body {
 }
 
 .wrapper {
-    text-align:center;
+    text-align: center;
     display: inline-block;
 }
 
-.wrapper ul{
-    text-align:justify;
+.wrapper ul {
+    text-align: justify;
     margin-top: 45px;
     margin-left: -20px;
 }
 
 .wrapper .static-txt {
-    margin-top:15px;
+    margin-top: 15px;
     font-size: 22px;
     color: #d3d3d3;
 }
@@ -33,30 +33,92 @@ body {
     font-weight: 500;
     color: #ff7a59;
     position: relative;
-    top:0;
+    top: 0;
     margin-left: 20px;
     margin-top: -48px;
 }
-.dynamic-txts li span{
+
+.dynamic-txts li span {
     color: #ff7a59;
     border-radius: 5px;
     font-family: "Sofia", sans-serif;
 }
-.dynamic-txts li span::after{
-    left:0;
-    content:"";
+
+.dynamic-txts li span::after {
+    left: 0;
+    content: "";
     position: absolute;
-    height:100%;
-    width:100%;
-    background:rgb(0, 27, 36);
-    border-left:2px solid #ff7a59;
-    animation:typing 1.5s steps(10) infinite;
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 27, 36);
+    border-left: 2px solid #ff7a59;
+    animation: typing 1.5s steps(10) infinite;
 }
 
-@keyframes typing{
-    100%{
-        left:100%;
+@keyframes typing {
+    100% {
+        left: 100%;
         margin: 0 -35px 0 35px;
+    }
+}
+
+.image-slide {
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    width: 680px;
+    height: 290px";
+
+}
+
+.animation-top {
+    position: relative;
+    animation: animatetop 0.4s
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+.animation-left {
+    position: relative;
+    animation: animateleft 0.4s
+}
+
+@keyframes animateleft {
+    from {
+        left: -300px;
+        opacity: 0
+    }
+
+    to {
+        left: 0;
+        opacity: 1
+    }
+}
+
+.animation-right {
+    position: relative;
+    animation: animateright 0.4s
+}
+
+@keyframes animateright {
+    from {
+        right: -300px;
+        opacity: 0
+    }
+
+    to {
+        right: 0;
+        opacity: 1
     }
 }
 
@@ -73,6 +135,7 @@ body {
     max-width: 100%;
 
 }
+
 .nav-bar {
     list-style: none;
     text-align: center;
@@ -81,13 +144,13 @@ body {
     max-width: 100%;
     margin-top: 25px;
     background-color: rgb(255, 255, 255);
-    border-radius:px;
+    border-radius: px;
 }
 
 .nav-bar li {
     display: inline-block;
     padding: 10px;
-    
+
 }
 
 .nav-bar li a {
@@ -102,9 +165,9 @@ body {
 }
 
 .nav-bar li a:hover {
-    
+
     color: rgb(255, 255, 255);
-    font-weight:bold;
+    font-weight: bold;
     font-weight: 550;
     background: #ff7a59;
     border-radius: 100px;
@@ -114,7 +177,7 @@ body {
 
 
 #article {
-  
+
     margin: 20px;
 }
 
@@ -124,7 +187,7 @@ body {
 }
 
 .container {
-    
+
     height: 40%;
 }
 
