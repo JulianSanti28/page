@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', ()=>{
-    getImageSlide()
+    let images = document.getElementsByClassName('image-slide')
+    if (images.length>0){
+        getImageSlide(images)
+    }
 
     let caracteristica = document.getElementById('caracteristica');
     let array = ["Desarrollador", "Disciplinado ", "Autodidácta", "Estudiante", ]
@@ -12,20 +15,20 @@ document.addEventListener('DOMContentLoaded', ()=>{
         caracteristica.innerHTML = array[i]
         i++
    }, 1500  )
-
-   var myIndex = 0;
     
 })
 var myIndex = 0;
-function getImageSlide(){
-    let images = document.getElementsByClassName('image-slide')
+function getImageSlide(images){
+    
     for(let i = 0; i<images.length;i++){
         images[i].style.display = 'none'
     }
     myIndex++;
     if (myIndex > images.length) {myIndex = 1}    
     images[myIndex-1].style.display = "block";  
-    setTimeout(getImageSlide, 2500); 
+    setTimeout(function() {
+        getImageSlide(images)
+    }, 2500); 
 }
 
 
