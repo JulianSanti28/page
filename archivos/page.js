@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
     }
 
     let caracteristica = document.getElementById('caracteristica');
+    let caracteristica_index= document.getElementById('caracteristica-index');
+    console.log(caracteristica_index)
     let array = ["Desarrollador", "Disciplinado ", "Autodidácta", "Estudiante", ]
     let i = 0
     setInterval(function() {
@@ -12,7 +14,15 @@ document.addEventListener('DOMContentLoaded', ()=>{
         if(i == array.length){
             i=0
         }
-        caracteristica.innerHTML = array[i]
+        if(caracteristica != undefined){
+            caracteristica.innerHTML = array[i]
+        } 
+
+        if(caracteristica_index != undefined){
+            caracteristica_index.innerHTML = array[i]
+        } 
+        
+        
         i++
    }, 1500  )
     
